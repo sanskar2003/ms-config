@@ -1,0 +1,5 @@
+build:
+  version: "2.0"
+
+enrollment:
+  message: "Hello"
