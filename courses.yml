@@ -2,4 +2,8 @@ build:
   version: "3.0"
 
 courses:
-  message: "Hello"
+  info:
+    app:
+      name: "courses"
+      description: "Courses for new joiners"
+      version: "1.0.0"
