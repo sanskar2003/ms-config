@@ -3,7 +3,7 @@ build:
 
 courses:
   info:
-  app:
-    name: "courses prod"
-    description: "Courses for new joiners"
-    version: "1.0.0"
+    app:
+      name: "courses prod"
+      description: "Courses for new joiners"
+      version: "1.0.0"
