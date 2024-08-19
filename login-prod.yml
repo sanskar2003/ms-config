@@ -2,31 +2,46 @@ build:
   version: "1.0"
 
 login:
-  message: "Hello"
+  message: "Hello prod"
 
 jwt:
   secret: ${JWT_SECRET:ycs78G&SACFSIA789sagc}
+
 server:
-  port: 8082
+  port: 8081
+
 spring:
+  application:
+    name: login
+  
+  config:
+    import: "optional:configserver:http://configserver:8090/" # Config Server URL
+
+  profiles:
+    active: default
+
   datasource:
-    url: jdbc:h2:mem:login
-    username: teama
-    password: ""
+    url: jdbc:mysql://localhost:3306/mydatabase
+    username: root
+    password: rootpassword
+
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      path: /h2-console
-      enabled: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  # h2:
+  #   console:
+  #     path: /h2-console
+  #     enabled: true
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
   info:
     env:
       enabled: true
@@ -34,8 +49,9 @@ management:
 eureka:
   instance:
     preferIpAddress: true
+
   client:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: "http://eurekaserver:8091/eureka/"
+      defaultZone: http://eurekaserver:8091/eureka/
