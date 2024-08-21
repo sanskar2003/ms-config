@@ -18,7 +18,7 @@ spring:
     import: "optional:configserver:http://configserver:8090/" # Config Server URL
 
   profiles:
-    active: default
+    active: prod
 
   datasource:
     url: jdbc:mysql://mysql:3306/mydatabase
