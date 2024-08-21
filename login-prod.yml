@@ -21,7 +21,7 @@ spring:
     active: default
 
   datasource:
-    url: jdbc:mysql://localhost:3306/mydatabase
+    url: jdbc:mysql://mysql:3306/mydatabase
     username: root
     password: rootpassword
 
