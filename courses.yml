@@ -14,12 +14,6 @@ courses:
 spring:
   application:
     name: courses
-  
-  config:
-    import: "optional:configserver:http://localhost:8090/" # Config Server URL
-
-  profiles:
-    active: default
 
   datasource:
     url: jdbc:mysql://localhost:3306/mydatabase
