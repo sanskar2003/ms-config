@@ -3,3 +3,52 @@ build:
 
 enrollment:
   message: "Hello"
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: login
+  
+  config:
+    import: "optional:configserver:http://configserver:8090/" # Config Server URL
+
+  profiles:
+    active: default
+
+  datasource:
+    url: jdbc:mysql://mysql:3306/mydatabase
+    username: root
+    password: rootpassword
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  # h2:
+  #   console:
+  #     path: /h2-console
+  #     enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eurekaserver:8091/eureka/
