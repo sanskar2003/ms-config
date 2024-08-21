@@ -13,7 +13,7 @@ server:
 
 spring:
   application:
-    name: login
+    name: courses
   
   config:
     import: "optional:configserver:http://configserver:8090/" # Config Server URL
