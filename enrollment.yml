@@ -10,12 +10,6 @@ server:
 spring:
   application:
     name: enrollment
-  
-  config:
-    import: "optional:configserver:http://localhost:8090/" # Config Server URL
-
-  profiles:
-    active: default
 
   datasource:
     url: jdbc:mysql://localhost:3306/mydatabase
