@@ -14,9 +14,6 @@ server:
 spring:
   application:
     name: courses
-  
-  config:
-    import: "optional:configserver:http://configserver:8090/" # Config Server URL
 
   datasource:
     url: jdbc:mysql://mysql:3306/mydatabase
