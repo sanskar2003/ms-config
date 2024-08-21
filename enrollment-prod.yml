@@ -9,7 +9,7 @@ server:
 
 spring:
   application:
-    name: login
+    name: enrollment
   
   config:
     import: "optional:configserver:http://configserver:8090/" # Config Server URL
