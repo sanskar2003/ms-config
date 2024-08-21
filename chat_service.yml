@@ -12,7 +12,7 @@ spring:
     name: chat_service
   
   config:
-    import: "optional:configserver:http://configserver:8090/" # Config Server URL
+    import: "optional:configserver:http://localhost:8090/" # Config Server URL
 
   profiles:
     active: default
@@ -51,4 +51,4 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8091/eureka/
+      defaultZone: http://localhost:8091/eureka/
