@@ -9,7 +9,7 @@ courses:
       version: "1.0.0"
 
 server:
-  port: 8081
+  port: 8080
 
 spring:
   application:
