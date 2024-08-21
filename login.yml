@@ -14,8 +14,8 @@ spring:
   application:
     name: login
   
-  config:
-    import: "optional:configserver:http://localhost:8090/" # Config Server URL
+  # config:
+  #   import: "optional:configserver:http://localhost:8090/" # Config Server URL
 
   datasource:
     url: jdbc:mysql://localhost:3306/mydatabase
